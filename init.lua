@@ -147,6 +147,26 @@ minetest.register_node("morethings:random_block", {
 	is_ground_content = true,
 })
 
+minetest.register_node("morethings:laminat", {
+	description = "Laminat",
+	tiles = {"morethings_laminat.png"},
+	paramtype2 = "facedir",
+	groups = {cracky=3},
+	sounds = default.node_sound_wood_defaults(),
+	drop = "morethings:laminat",
+	is_ground_content = true,
+})
+
+minetest.register_node("morethings:parkett", {
+	description = "Parkett",
+	tiles = {"morethings_parkett.png"},
+	paramtype2 = "facedir",
+	groups = {cracky=3},
+	sounds = default.node_sound_wood_defaults(),
+	drop = "morethings:parkett",
+	is_ground_content = true,
+})
+
 -------Define Light Blocks
 
 minetest.register_node("morethings:lightblock", {
