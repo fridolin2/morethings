@@ -16,7 +16,7 @@ minetest.register_tool("morethings:krypton_shield", {
 minetest.register_tool("morethings:random_shield", {
 	description = "Random Shield",
 	inventory_image = "morethings_random_shield_inv.png",
-	groups = {armor_shield=20000, armor_heal=6000, armor_use=0, armor_fire=50000},
+	groups = {armor_shield=20000, armor_heal=6000, armor_use=0, armor_fire=50000, not_in_creative_inventory=1},
 	wear = 0,
 })
 
