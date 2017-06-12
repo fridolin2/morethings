@@ -6,8 +6,16 @@ if minetest.get_modpath("3d_armor") then
 dofile(minetest.get_modpath("morethings").."/morethings_armor.lua")
 end
 
+if minetest.get_modpath("moreores") then
+dofile(minetest.get_modpath("morethings").."/morethings_moreores.lua")
+end
+
 if minetest.get_modpath("shields") then
 dofile(minetest.get_modpath("morethings").."/morethings_shields.lua")
+end
+
+if minetest.get_modpath("quartz") then
+dofile(minetest.get_modpath("morethings").."/morethings_quartz.lua")
 end
 
 -- Define Ore Block Nodes
