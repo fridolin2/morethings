@@ -235,6 +235,24 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "morethings:parkett",
+	recipe = {
+		{"default:junglewood", "default:wood", "default:junglewood"},
+		{"default:wood", "default:junglewood", "default:wood"},
+		{"default:junglewood", "default:wood", "default:junglewood"}
+	}
+})
+
+minetest.register_craft({
+	output = "morethings:laminat",
+	recipe = {
+		{"default:wood", "default:junglewood", "default:wood"},
+		{"default:junglewood", "default:wood", "default:junglewood"},
+		{"default:wood", "default:junglewood", "default:wood"}
+	}
+})
+
+minetest.register_craft({
 	output = "morethings:tile",
 	recipe = {
 		{"", "default:stone", ""},
@@ -357,6 +375,11 @@ minetest.register_craftitem("morethings:krypton_lump", {
 	inventory_image = "morethings_krypton_lump.png",
 })
 
+minetest.register_craftitem("morethings:mese_ingot", {
+	description = "MESE Ingot",
+	inventory_image = "morethings_mese_ingot.png",
+})
+
 minetest.register_craftitem("morethings:obsidian_ingot", {
 	description = "Obsidian Ingot",
 	inventory_image = "morethings_obsidian_ingot.png",
@@ -381,6 +404,12 @@ minetest.register_craftitem("morethings:obsidian_dust", {
 	description = "Obsidian Dust",
 	inventory_image = "morethings_obsidian_dust.png",
 	on_use = minetest.item_eat(2)
+})
+
+minetest.register_craftitem("morethings:diamond_dust", {
+	description = "Diamond Dust",
+	inventory_image = "morethings_diamond_dust.png",
+	on_use = minetest.item_eat(20)
 })
 
 --Define smelt Recipes
@@ -457,7 +486,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "morethings:obsidian_dust", 
+	output = '"morethings:obsidian_dust" 9',  
 	recipe = {
 		{"", "morethings:obsidian_hammer", ""},
 		{"", "default:obsidian", ""},
@@ -466,11 +495,38 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = '"morethings:diamond_dust" 9', 
+	recipe = {
+		{"", "morethings:obsidian_hammer", ""},
+		{"", "default:diamond", ""},
+		{"", "", ""}
+	}
+})
+
+minetest.register_craft({
 	output = "morethings:refined_obsidian_dust", 
 	recipe = {
 		{"", "morethings:obsidian_dust", ""},
-		{"", "default:diamond", ""},
+		{"", "morethings:diamond_dust", ""},
 		{"", "", ""}
+	}
+})
+
+minetest.register_craft({
+	output = '"default:obsidian_shard" 18', 
+	recipe = {
+		{"", "morethings:obsidian_hammer", ""},
+		{"", "default:obsidian", "default:obsidian"},
+		{"", "", ""}
+	}
+})
+
+minetest.register_craft({
+	output = '"morethings:mese_ingot" 2',  
+	recipe = {
+		{"default:obsidian_shard", "default:obsidian_shard", "default:obsidian_shard"},
+		{"default:obsidian_shard", "default:mese_crystal", "default:obsidian_shard"},
+		{"default:obsidian_shard", "default:obsidian_shard", "default:obsidian_shard"}
 	}
 })
 

@@ -13,6 +13,13 @@ minetest.register_tool("morethings:krypton_shield", {
 	wear = 0,
 })
 
+minetest.register_tool("morethings:mese_shield", {
+	description = "MESE Shield",
+	inventory_image = "morethings_mese_shield_inv.png",
+	groups = {armor_shield=100, armor_heal=5, armor_use=400, armor_fire=5},
+	wear = 0,
+})
+
 minetest.register_tool("morethings:random_shield", {
 	description = "Random Shield",
 	inventory_image = "morethings_random_shield_inv.png",
@@ -37,5 +44,14 @@ minetest.register_craft({
 		{"morethings:krypton_ingot", "morethings:krypton_ingot", "morethings:krypton_ingot"},
 		{"morethings:krypton_ingot", "morethings:krypton_ingot", "morethings:krypton_ingot"},
 		{"", "morethings:krypton_ingot", ""},
+	},
+})
+
+minetest.register_craft({
+	output = "morethings:mese_shield",
+	recipe = {
+		{"morethings:mese_ingot", "morethings:mese_ingot", "morethings:mese_ingot"},
+		{"morethings:mese_ingot", "morethings:mese_ingot", "morethings:mese_ingot"},
+		{"", "morethings:mese_ingot", ""},
 	},
 })
