@@ -20,6 +20,13 @@ minetest.register_tool("morethings:mese_shield", {
 	wear = 0,
 })
 
+minetest.register_tool("morethings:ghost_shield", {
+	description = "Ghost Shield",
+	inventory_image = "morethings_ghost_shield_inv.png",
+	groups = {armor_shield=1, armor_heal=0, armor_use=400, armor_fire=2},
+	wear = 0,
+})
+
 minetest.register_tool("morethings:random_shield", {
 	description = "Random Shield",
 	inventory_image = "morethings_random_shield_inv.png",
@@ -53,5 +60,14 @@ minetest.register_craft({
 		{"morethings:mese_ingot", "morethings:mese_ingot", "morethings:mese_ingot"},
 		{"morethings:mese_ingot", "morethings:mese_ingot", "morethings:mese_ingot"},
 		{"", "morethings:mese_ingot", ""},
+	},
+})
+
+minetest.register_craft({
+	output = "morethings:ghost_shield",
+	recipe = {
+		{"", "morethings:ghost_ingot", ""},
+		{"morethings:ghost_ingot", "morethings:ghost_ingot", "morethings:ghost_ingot"},
+		{"morethings:ghost_ingot", "morethings:ghost_ingot", "morethings:ghost_ingot"},
 	},
 })

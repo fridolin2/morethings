@@ -38,6 +38,16 @@ minetest.register_node("morethings:krypton_ore", {
 	is_ground_content = true,
 })
 
+minetest.register_node("morethings:ghost_ore", {
+	description = "Ghost Ore",
+	tiles = {"morethings_ghost_ore_block.png"},
+	light_source = default.LIGHT_MAX - 14,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults(),
+	drop = "morethings:ghost_lump",
+	is_ground_content = true,
+})
+
 -- Define Block Nodes
 
 
@@ -70,6 +80,15 @@ minetest.register_node("morethings:flint_block", {
 	is_ground_content = true,
 })
 
+minetest.register_node("morethings:ghost_block", {
+	description = "Ghost Block",
+	tiles = {"morethings_ghost_block.png"},
+	light_source = default.LIGHT_MAX - 14,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults(),
+	drop = 'craft "morethings:ghost_ingot" 9',
+	is_ground_content = true,
+})
 -------Define Tiles
 
 minetest.register_node("morethings:tile", {
@@ -204,6 +223,15 @@ minetest.register_craft({
 		{"morethings:krypton_ingot", "morethings:krypton_ingot", "morethings:krypton_ingot"},
 		{"morethings:krypton_ingot", "morethings:krypton_ingot", "morethings:krypton_ingot"},
 		{"morethings:krypton_ingot", "morethings:krypton_ingot", "morethings:krypton_ingot"}
+	}
+})
+
+minetest.register_craft({
+	output = "morethings:ghost_block",
+	recipe = {
+		{"morethings:ghost_ingot", "morethings:ghost_ingot", "morethings:ghost_ingot"},
+		{"morethings:ghost_ingot", "morethings:ghost_ingot", "morethings:ghost_ingot"},
+		{"morethings:ghost_ingot", "morethings:ghost_ingot", "morethings:ghost_ingot"}
 	}
 })
 
@@ -385,6 +413,16 @@ minetest.register_craftitem("morethings:obsidian_ingot", {
 	inventory_image = "morethings_obsidian_ingot.png",
 })
 
+minetest.register_craftitem("morethings:ghost_ingot", {
+	description = "Ghost Ingot",
+	inventory_image = "morethings_ghost_ingot.png",
+})
+
+minetest.register_craftitem("morethings:ghost_lump", {
+	description = "Ghost Lump",
+	inventory_image = "morethings_ghost_lump.png",
+})
+
 minetest.register_craftitem("morethings:obsidian_hammer", {
 	description = "Obsidian Hammer",
 	inventory_image = "morethings_obsidian_hammer.png",
@@ -454,6 +492,13 @@ minetest.register_craft({
 	output = "morethings:obsidian_ingot",
 	recipe = "morethings:refined_obsidian_dust",
 	cooktime = 20,
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "morethings:ghost_ingot",
+	recipe = "morethings:ghost_lump",
+	cooktime = 30,
 })
 
 --Define Craftitems Craft Recipes
@@ -544,6 +589,15 @@ minetest.register_craft({
 	recipe = {
 		{"", "", ""},
 		{"", "morethings:red_block", ""},
+		{"", "", ""}
+	}
+})
+
+minetest.register_craft({
+	output = "morethings:ghost_ingot 9", 
+	recipe = {
+		{"", "", ""},
+		{"", "morethings:ghost_block", ""},
 		{"", "", ""}
 	}
 })
@@ -936,4 +990,15 @@ minetest.register_ore({
 	clust_size = 2,
 	y_min = -31000,
 	y_max = -350,
+})
+
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "morethings:ghost_ore",
+	wherein = "default:stone",
+	clust_scarcity = 17*17*17,
+	clust_num_ores = 6,
+	clust_size = 4,
+	y_min = -31000,
+	y_max = -150,
 })

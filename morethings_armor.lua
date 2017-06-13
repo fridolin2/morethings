@@ -68,9 +68,34 @@ minetest.register_tool("morethings:mese_leggings", {
 	wear = 0,
 })
 minetest.register_tool("morethings:mese_boots", {
-	description = "mese Boots",
+	description = "MESE Boots",
 	inventory_image = "morethings_mese_boots_inv.png",
 	groups = {armor_feet=20, armor_heal=5, physics_speed=2, physics_jump=2, armor_use=0},
+	wear = 0,
+})
+
+ minetest.register_tool("morethings:ghost_helmet", {
+	description = "Ghost Helmet",
+	inventory_image = "morethings_ghost_helmet_inv.png",
+	groups = {armor_head=10, armor_heal=0, armor_use=400},
+	wear = 0,
+})
+minetest.register_tool("morethings:ghost_chestplate", {
+	description = "Ghost Chestplate",
+	inventory_image = "morethings_ghost_chestplate_inv.png",
+	groups = {armor_torso=20, armor_heal=0, armor_use=400},
+	wear = 0,
+})
+minetest.register_tool("morethings:ghost_leggings", {
+	description = "Ghost Leggings",
+	inventory_image = "morethings_ghost_leggings_inv.png",
+	groups = {armor_legs=15, armor_heal=5, armor_use=400},
+	wear = 0,
+})
+minetest.register_tool("morethings:ghost_boots", {
+	description = "Ghost Boots",
+	inventory_image = "morethings_ghost_boots_inv.png",
+	groups = {armor_feet=10, armor_heal=5, physics_speed=1, physics_jump=0, armor_use=400},
 	wear = 0,
 })
  
@@ -168,5 +193,37 @@ minetest.register_craft({
 	recipe = {
 		{"morethings:mese_ingot", "", "morethings:mese_ingot"},
 		{"morethings:mese_ingot", "", "morethings:mese_ingot"},
+	},
+})
+
+minetest.register_craft({
+	output = "morethings:ghost_helmet",
+	recipe = {
+		{"morethings:ghost_ingot", "morethings:ghost_ingot", "morethings:ghost_ingot"},
+		{"morethings:ghost_ingot", "", "morethings:ghost_ingot"},
+		{"", "", ""},
+	},
+})
+minetest.register_craft({
+	output = "morethings:ghost_chestplate",
+	recipe = {
+		{"morethings:ghost_ingot", "", "morethings:ghost_ingot"},
+		{"morethings:ghost_ingot", "morethings:ghost_ingot", "morethings:ghost_ingot"},
+		{"morethings:ghost_ingot", "morethings:ghost_ingot", "morethings:ghost_ingot"},
+	},
+})
+minetest.register_craft({
+	output = "morethings:ghost_leggings",
+	recipe = {
+		{"morethings:ghost_ingot", "morethings:ghost_ingot", "morethings:ghost_ingot"},
+		{"morethings:ghost_ingot", "", "morethings:ghost_ingot"},
+		{"morethings:ghost_ingot", "", "morethings:ghost_ingot"},
+	},
+})
+minetest.register_craft({
+	output = "morethings:ghost_boots",
+	recipe = {
+		{"morethings:ghost_ingot", "", "morethings:ghost_ingot"},
+		{"morethings:ghost_ingot", "", "morethings:ghost_ingot"},
 	},
 })
