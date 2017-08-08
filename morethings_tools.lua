@@ -32,7 +32,7 @@ minetest.register_tool("morethings:krypton_pickaxe", {
 minetest.register_craft({
 	output = "morethings:red_pickaxe",
 	recipe = {
-		{"morethings:red_ingot", "morethings:red_ingot", "morethings:red_ingot"},
+		{"morethings:red_crystal", "morethings:red_crystal", "morethings:red_crystal"},
 		{"", "default:stick", ""},
 		{"", "default:stick", ""}
 	}
@@ -83,8 +83,8 @@ minetest.register_tool("morethings:krypton_axe", {
 minetest.register_craft({
 	output = "morethings:red_axe",
 	recipe = {
-		{"morethings:red_ingot", "morethings:red_ingot", ""},
-		{"morethings:red_ingot", "default:stick", ""},
+		{"morethings:red_crystal", "morethings:red_crystal", ""},
+		{"morethings:red_crystal", "default:stick", ""},
 		{"", "default:stick", ""}
 	}
 })
@@ -92,8 +92,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "morethings:red_axe",
 	recipe = {
-		{"", "morethings:red_ingot", "morethings:red_ingot"},
-		{"", "default:stick", "morethings:red_ingot"},
+		{"", "morethings:red_crystal", "morethings:red_crystal"},
+		{"", "default:stick", "morethings:red_crystal"},
 		{"", "default:stick", ""}
 	}
 })
@@ -153,7 +153,7 @@ minetest.register_tool("morethings:krypton_shovel", {
 minetest.register_craft({
 	output = "morethings:red_shovel",
 	recipe = {
-		{"", "morethings:red_ingot", ""},
+		{"", "morethings:red_crystal", ""},
 		{"", "default:stick", ""},
 		{"", "default:stick", ""}
 	}
@@ -201,8 +201,8 @@ minetest.register_tool("morethings:krypton_sword", {
 minetest.register_craft({
 	output = "morethings:red_sword",
 	recipe = {
-		{"", "morethings:red_ingot", ""},
-		{"", "morethings:red_ingot", ""},
+		{"", "morethings:red_crystal", ""},
+		{"", "morethings:red_crystal", ""},
 		{"", "default:stick", ""}
 	}
 })
